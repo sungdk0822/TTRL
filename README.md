@@ -23,6 +23,8 @@
 
 # 🎉News
 
+- **[2025-04-24]** We release training code and experimental logs for TTRL. Check it out: [Getting Started](#getting-started)
+
 - **[2025-04-23]** We present **TTRL** (Test-Time Reinforcement Learning), an open-source solution for online RL on data without ground-truth labels, especially test data.
 
 # 📖Introduction
@@ -55,7 +57,17 @@ Furthermore, although TTRL is only supervised by the Maj@N metric, TTRL has demo
 
 # ✨Getting Started
 
-*Code is coming soon.*
+You can reproduce the results of Qwen2.5-Math-7B on AIME 2024 with the following commands:
+
+```bash
+git clone git@github.com:PRIME-RL/TTRL.git
+cd code
+
+pip install -r requirements.txt
+pip install -e .
+
+bash scripts/ttrl_aime_grpo_7b.sh ttrl_dir qwen_model_dir wandb_key
+```
 
 The implementation of TTRL can be achieved rapidly by simply modifying the reward function. Please refer to the following code snippet for details:
 
@@ -63,6 +75,8 @@ The implementation of TTRL can be achieved rapidly by simply modifying the rewar
    <img src="figs/ttrl_reward.png" alt="The pseudo-code of the majority voting reward function." style="width: 95%;">
 </p>
 
+The current code is a preview version developed internally based on [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF), and we will continue to optimize it and officially launch it soon.
+Meanwhile, TTRL will also be integrated into the official [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF)&[verl](https://github.com/volcengine/verl) code.
 
 # 📨Contact
 
@@ -81,3 +95,4 @@ If you find TTRL helpful, please cite us.
   year={2025}
 }
 ```
+
