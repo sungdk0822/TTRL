@@ -61,6 +61,8 @@ Furthermore, although TTRL is only supervised by the Maj@N metric, TTRL has demo
 
 # ✨Getting Started
 
+AIME 2024 exhibits a certain degree of instability. To ensure the validity and reproducibility of our results, we additionally conducted three independent runs using this preview version of the code. Two of the runs achieved a pass@1 of 43.3, while one run reached 46.7. For detailed metrics, please refer to the [Weights & Biases logs](https://wandb.ai/truman-yx-zuo-nlp/TTRL/workspace).
+
 You can reproduce the results of Qwen2.5-Math-7B on AIME 2024 with the following commands:
 
 ```bash
@@ -81,6 +83,8 @@ The implementation of TTRL can be achieved rapidly by simply modifying the rewar
 
 The current code is a preview version developed internally based on [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF), and we will continue to optimize it and officially launch it soon.
 Meanwhile, TTRL will also be integrated into the official [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF)&[verl](https://github.com/volcengine/verl) code.
+
+*All experiments were conducted on 8 * NVIDIA A100 40GB GPUs.*
 
 # 📨Contact
 
