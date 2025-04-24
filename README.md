@@ -44,7 +44,10 @@ While this setting appears elusive, we find that common practices in Test-Time S
 
 
 # 📃Evaluation
-
+<details>
+<summary>
+  Evaluation Details
+</summary>
 Our experiments demonstrate that TTRL consistently improves performance across a variety of tasks and models.
 Notably, TTRL boosts the pass@1 performance of Qwen-2.5-Math-7B by approximately 159% on the AIME 2024 with only unlabeled test data.
 
@@ -54,6 +57,7 @@ Furthermore, although TTRL is only supervised by the Maj@N metric, TTRL has demo
    <img src="figs/results.jpg" alt="Overview of TTRL." style="width: 95%;">
 </p>
 
+</details>
 
 # ✨Getting Started
 
