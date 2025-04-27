@@ -104,3 +104,6 @@ If you find TTRL helpful, please cite us.
 }
 ```
 
+# ⭐️Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=PRIME-RL/TTRL&type=Date)](https://www.star-history.com/#PRIME-RL/TTRL&Date)
