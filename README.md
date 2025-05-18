@@ -90,7 +90,7 @@ Meanwhile, TTRL will also be integrated into the official [OpenRLHF](https://git
 
 - Kaiyan Zhang: zhang-ky22@mails.tsinghua.edu.cn
 
-- Ning Ding: dn97@mail.tsinghua.edu.cn
+- Ning Ding: dingning@mail.tsinghua.edu.cn
 
 # 🎈Citation
 If you find TTRL helpful, please cite us.
