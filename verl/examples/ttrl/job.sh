@@ -9,7 +9,7 @@ DATE=$(date +%m%d)
 TIME_TAG=$(date +%H%M%S)
 
 TASK="AIME-TTT"
-BACKBONE="Qwen2.5-Math-1.5B"
+BACKBONE="Qwen/Qwen2.5-Math-1.5B"
 ADVANTAGE="grpo"
 
 K=3
@@ -29,7 +29,7 @@ MINI_BATCH_SIZE=1 # Actual mini batch size is MINI_BATCH_SIZE * N_SAMPLES_PER_PR
 MICRO_BATCH_SIZE=2
 
 DATA_LOCAL_DIR="/home/elicer/TTRL/verl/data"
-BACKBONE_PATH="/home/elicer/TTRL/llms/Qwen/${BACKBONE}"
+BACKBONE_PATH="${BACKBONE}"
 
 MODEL="${TASK}-${BACKBONE}"
 EXPERIMENT="TTRL-Len@${K}k"
@@ -39,7 +39,10 @@ LOG_NAME="${DATE}-${EXPERIMENT}-${MODEL}-${ADVANTAGE}"
 OUTPUT_DIR="checkpoints/${WANDB_PROJECT}/${MODEL}/${DATE}/${EXPERIMENT}-${ADVANTAGE}-${TIME_TAG}"
 
 # ------------------------------------------------------------
-python -m verl.trainer.main_ppo \
+
+export RAY_ADDRESS="http://127.0.0.1:8265"
+ray job submit \
+  -- python -m verl.trainer.main_ppo \
   reward_model.reward_manager=ttrl \
   reward_model.reward_kwargs.n_samples_per_prompt=$N_SAMPLES_PER_PROMPT \
   reward_model.reward_kwargs.n_votes_per_prompt=$N_VOTES_PER_PROMPT \
