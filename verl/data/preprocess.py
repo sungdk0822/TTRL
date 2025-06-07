@@ -34,7 +34,7 @@ def make_map_fn(split, source=None):
 
 if __name__ == '__main__':
 
-    data_source = 'MATH-L5-TTT'
+    data_source = 'AIME-TTT'
 
     train_dataset = datasets.load_dataset("json", data_files=os.path.join(data_source, 'train.json'), split='train')
     test_dataset = datasets.load_dataset("json", data_files=os.path.join(data_source, 'test.json'), split='train')
